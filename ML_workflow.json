@@ -1,0 +1,106 @@
+{
+	"title" : "Machine Learning Workflow",
+	"Machine Learning" : "is nothing but a field of study which allows computers to 'learn' like humans without any need of explicit programming.",
+	"description" : "This is a cheat sheet to determine wich algorithm or model you will use based on your needs.",
+	"image" : "",
+	"let's go" : {
+
+		"question" : "How many data sample do you have? >50?",
+		"yes" : {
+
+			"question" : "Are you predicting a category?",
+			"example" : "does this guy have depression or anxiety?",
+			"yes" : {
+
+				"question" : "Are you have labeled data?",
+				"example" : "this are 500 data of depressed men and the other 500 are the anxiety one.",
+				"yes" : {
+
+					"dialog" : "You entering the 'CLASSIFICATION' field, on 'SUPERVISED LEARNING' region.", 
+					"question" : "Do you want this model to be fast or accurate?",
+					"fast" : {
+
+						"question" : "Do you want to know how the model work?",
+						"example" : "wich feature makes this guy depressed?",
+						"yes" : 
+							["decision tree", "logistic regression"],
+
+						"no" : {
+
+							"question" : ">100K data samples?",
+							"yes" :
+								["naive bayes"]
+
+						}
+
+					}
+
+				}
+			}
+
+		},
+		"no" : {
+			"content" : "GET MORE DATA YOU LAZY ASS!!"
+		}
+
+
+	},
+	"algorithms" : {
+		"decision tree" : {
+
+			"definition" : "is where the data is continuously split according to a certain parameter. The tree can be explained by two entities, namely decision nodes and leaves. The leaves are the decisions or the final outcomes. And the decision nodes are where the data is split.",
+			"image" : "https://miro.medium.com/max/360/1*XMId5sJqPtm8-RIwVVz2tg.png",
+			"tutorial" : "https://riptutorial.com/scikit-learn/example/23731/a-decision-tree",
+			"read more" : "https://www.xoriant.com/blog/product-engineering/decision-trees-machine-learning-algorithm.html"
+		},
+		"logistic regression" : {
+
+			"definition" : "is the go-to method for binary classification",
+			"image" : "https://i1.wp.com/docs.microsoft.com/en-us/azure/machine-learning/studio/media/algorithm-choice/image4.png",
+			"tutorial" : "https://riptutorial.com/scikit-learn/example/27960/classification-using-logistic-regression",
+			"read more" : "https://machinelearning-blog.com/2018/04/23/logistic-regression-101/"
+		},
+		"naive bayes" : {
+
+			"definition" : "is a statistical classification technique based on Bayes Theorem for binary (two-class) and multi-class classification problems",
+			"tutorial" : "https://www.datacamp.com/community/tutorials/naive-bayes-scikit-learn",
+			"read more" : "https://machinelearningmastery.com/naive-bayes-for-machine-learning/"
+		},
+		"linearSVC" : {
+
+			"definition" : "is the newest extremely fast machine learning (data mining) algorithm for solving multiclass classification problems from ultra large data sets that implements an original proprietary version of a cutting plane algorithm for designing a linear support vector machine.",
+			"tutorial" : "https://pythonprogramming.net/linear-svc-example-scikit-learn-svm-python/"
+		},
+		"KNeighborsClassifier" : {
+
+			"definition" : "K Nearest Neighbors implements tree like data structure to determine the distances from point of interest to points in training set.",
+			"tutorial" : "https://docs.w3cub.com/scikit_learn/modules/generated/sklearn.neighbors.kneighborsclassifier/",
+			"read more" : "https://medium.com/machine-learning-101/k-nearest-neighbors-classifier-1c1ff404d265"
+
+		},
+		"essemble classifier" : {
+			"definition" : "Ensemble methods is a machine learning technique that combines several base models in order to produce one optimal predictive model.",
+			"read more" : "https://towardsdatascience.com/ensemble-methods-in-machine-learning-what-are-they-and-why-use-them-68ec3f9fef5f",
+			"adaBoost" : {
+				"definition" : "Ada-boost classifier combines weak classifier algorithm to form strong classifier.",
+				"read more" : "https://medium.com/machine-learning-101/https-medium-com-savanpatel-chapter-6-adaboost-classifier-b945f330af06",
+				"tutorial" : "https://towardsdatascience.com/machine-learning-part-17-boosting-algorithms-adaboost-in-python-d00faac6c464"
+			}
+		},
+		"SGD classifier" : {
+			"definition" : "is a simple yet very efficient approach to discriminative learning of linear classifiers.",
+			"tutorial" : "https://github.com/iAmKankan/MachineLearning_With_Python/tree/master/SGD%20Classifier"
+		},
+		"kernel approximation" : {
+			"definition" : "a “kernel” is usually used to refer to the kernel trick, a method of using a linear classifier to solve a non-linear problem.",
+			"radial basis function kernel" : {
+				"tutorial" : "https://scikit-learn.org/stable/modules/kernel_approximation.html"	
+			}
+			
+		}
+	}
+}
+
+		"question" : "Do you want to reduce the data dimension?",
+		"introduction" : "The higher the number of features, the harder it gets to visualize the training set and then work on it. Sometimes, most of these features are correlated, and hence redundant.",
+		"description" : ""
